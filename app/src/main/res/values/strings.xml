@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MiTalla</string>
+    <string name="agregar_talla">Agregar Talla</string>
+    <string name="editar_talla">Editar Talla</string>
+    <string name="detalle_talla">Detalle de Talla</string>
+    <string name="mis_tallas">Mis Tallas</string>
+    <string name="guardar">Guardar</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="editar">Editar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="confirmar_eliminacion">¿Estás seguro de eliminar esta talla?</string>
+    <string name="talla_eliminada">Talla eliminada correctamente</string>
+    <string name="talla_guardada">Talla guardada correctamente</string>
+    <string name="error_campos_vacios">Por favor completa todos los campos obligatorios</string>
+    <string name="error_conexion">Error de conexión. Verifica tu internet</string>
+</resources>

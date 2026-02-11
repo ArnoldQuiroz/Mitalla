@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listaFragment">
+
+    <!-- Fragmento de Lista -->
+    <fragment
+        android:id="@+id/listaFragment"
+        android:name="com.quiroz.mitalla.ui.fragments.ListaFragment"
+        android:label="Mis Tallas"
+        tools:layout="@layout/fragment_lista">
+
+        <action
+            android:id="@+id/action_lista_to_formulario"
+            app:destination="@id/formularioFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_lista_to_detalle"
+            app:destination="@id/detalleFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <!-- Fragmento de Formulario (Crear/Editar) -->
+    <fragment
+        android:id="@+id/formularioFragment"
+        android:name="com.quiroz.mitalla.ui.fragments.FormularioFragment"
+        android:label="Talla"
+        tools:layout="@layout/fragment_formulario">
+
+        <argument
+            android:name="tallaId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+
+        <action
+            android:id="@+id/action_formulario_to_lista"
+            app:destination="@id/listaFragment"
+            app:popUpTo="@id/listaFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Fragmento de Detalle -->
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="com.quiroz.mitalla.ui.fragments.DetalleFragment"
+        android:label="Detalle de Talla"
+        tools:layout="@layout/fragment_detalle">
+
+        <argument
+            android:name="tallaId"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_detalle_to_formulario"
+            app:destination="@id/formularioFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_detalle_to_lista"
+            app:destination="@id/listaFragment"
+            app:popUpTo="@id/listaFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>
