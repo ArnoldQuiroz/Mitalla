@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: mitalla-backend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8083
+      - key: JAVA_OPTS
+        value: -Xmx512m -Xms256m
